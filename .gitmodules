@@ -1,0 +1,3 @@
+[submodule "cryptolmap_sim"]
+	path = cryptolmap_sim
+	url = git@github.com:EmbeddedComputing/cryptolmap_sim.git
