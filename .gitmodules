@@ -4,3 +4,6 @@
 [submodule "Vitis_Libraries"]
 	path = Vitis_Libraries
 	url = git@github.com:EmbeddedComputing/Vitis_Libraries.git
+[submodule "cryptolmap_hls"]
+	path = cryptolmap_hls
+	url = git@github.com:EmbeddedComputing/cryptolmap_hls.git
