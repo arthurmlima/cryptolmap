@@ -1,3 +1,6 @@
 [submodule "cryptolmap_sim"]
 	path = cryptolmap_sim
 	url = git@github.com:EmbeddedComputing/cryptolmap_sim.git
+[submodule "Vitis_Libraries"]
+	path = Vitis_Libraries
+	url = git@github.com:EmbeddedComputing/Vitis_Libraries.git
