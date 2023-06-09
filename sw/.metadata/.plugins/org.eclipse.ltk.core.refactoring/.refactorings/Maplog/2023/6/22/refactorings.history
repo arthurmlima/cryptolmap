@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Maplog/src/config_peripherals&apos; to &apos;config_peripherals.h&apos;" description="Rename resource &apos;config_peripherals&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/config_peripherals" name="config_peripherals.h" stamp="1685829234867" updateReferences="true"/>
+</session>
