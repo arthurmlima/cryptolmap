@@ -7,3 +7,6 @@
 [submodule "cryptolmap_hls"]
 	path = cryptolmap_hls
 	url = git@github.com:EmbeddedComputing/cryptolmap_hls.git
+[submodule "23ieee-lucas"]
+	path = 23ieee-lucas
+	url = git@github.com:arthurmlima/23ieee-lucas.git
