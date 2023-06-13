@@ -80,3 +80,6 @@ update_compile_order -fileset sources_1
 set output [exec nproc]
 
 launch_runs impl_1 -to_step write_bitstream -jobs $output
+
+write_hw_platform -fixed -include_bit -force -file /home/arthur/crypto/hw/cryptolmap.xsa
+exit
