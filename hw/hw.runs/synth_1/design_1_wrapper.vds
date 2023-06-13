@@ -1,0 +1,562 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Jun 12 14:59:31 2023
+# Process ID: 29071
+# Current directory: /home/arthur/crypto/hw/hw.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/arthur/crypto/hw/hw.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/arthur/crypto/hw/hw.runs/synth_1/vivado.jou
+# Running On: arthur-G3-3579, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 6, Host memory: 16613 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/arthur/crypto/hw/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+Command: synth_design -top design_1_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29107
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2605.465 ; gain = 239.801 ; free physical = 8713 ; free virtual = 60628
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2192.189; parent = 1937.470; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.566; parent = 2611.406; children = 984.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_axi_dma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_axi_dma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:202]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:202]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:202]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 61 given [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:202]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_axi_smc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_axi_smc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:616]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1382]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1382]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1507]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1507]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1639]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1639]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:2049]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:2049]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1341]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1341]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:1341]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:616]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_rst_ps8_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_rst_ps8_0_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:451]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:451]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:451]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:451]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'design_1_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:451]
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_module_0_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_top_module_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_module_0_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_top_module_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_top_module_0_0' is unconnected for instance 'top_module_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:458]
+WARNING: [Synth 8-7071] port 'output_stream_TSTRB' of module 'design_1_top_module_0_0' is unconnected for instance 'top_module_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:458]
+WARNING: [Synth 8-7071] port 'output_stream_TUSER' of module 'design_1_top_module_0_0' is unconnected for instance 'top_module_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:458]
+WARNING: [Synth 8-7071] port 'output_stream_TID' of module 'design_1_top_module_0_0' is unconnected for instance 'top_module_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:458]
+WARNING: [Synth 8-7071] port 'output_stream_TDEST' of module 'design_1_top_module_0_0' is unconnected for instance 'top_module_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:458]
+WARNING: [Synth 8-7023] instance 'top_module_0' of module 'design_1_top_module_0_0' has 38 connections declared, but only 33 given [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:458]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [/home/arthur/crypto/hw/hw.runs/synth_1/.Xil/Vivado-29071-arthur-G3-3579/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 123 connections declared, but only 117 given [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:496]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2690.371 ; gain = 324.707 ; free physical = 8699 ; free virtual = 60709
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2192.189; parent = 1937.470; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3674.535; parent = 2690.375; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2708.184 ; gain = 342.520 ; free physical = 8685 ; free virtual = 60694
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2192.189; parent = 1937.470; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3692.348; parent = 2708.188; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2708.184 ; gain = 342.520 ; free physical = 8663 ; free virtual = 60672
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2192.189; parent = 1937.470; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3692.348; parent = 2708.188; children = 984.160
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2708.184 ; gain = 0.000 ; free physical = 8662 ; free virtual = 60671
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2788.059 ; gain = 0.000 ; free physical = 8319 ; free virtual = 60599
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_top_module_0_0/design_1_top_module_0_0/design_1_top_module_0_0_in_context.xdc] for cell 'design_1_i/top_module_0'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_top_module_0_0/design_1_top_module_0_0/design_1_top_module_0_0_in_context.xdc] for cell 'design_1_i/top_module_0'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc]
+WARNING: [Vivado 12-584] No ports matched 'UART2_TXD_FPGA_RXD'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'UART2_TXD_FPGA_RXD'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'UART2_RXD_FPGA_TXD'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'UART2_RXD_FPGA_TXD'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'UART2_RTS_B'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'UART2_RTS_B'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'UART2_CTS_B'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'UART2_CTS_B'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'CLK_125_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'CLK_125_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'CLK_125_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'CLK_125_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_TX_LVDS_OUT_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_TX_LVDS_OUT_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_TX_LVDS_OUT_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_TX_LVDS_OUT_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_REC_CLOCK_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_REC_CLOCK_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_REC_CLOCK_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_REC_CLOCK_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA23_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA23_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA23_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA23_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA27_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA27_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA27_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA27_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA21_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA21_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA21_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA21_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA24_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA24_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA24_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA24_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA26_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA26_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA26_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA26_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA25_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA25_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA25_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:143]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA25_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:144]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA19_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:149]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA19_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:150]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA19_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA19_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA20_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:153]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA20_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA20_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA20_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA18_CC_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA18_CC_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA18_CC_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA18_CC_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA22_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA22_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA22_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA22_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA17_CC_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:165]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA17_CC_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA17_CC_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA17_CC_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK1_M2C_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK1_M2C_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK1_M2C_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK1_M2C_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:176]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA30_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA30_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:182]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA30_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:183]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA30_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA32_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA32_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:186]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA32_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:187]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA32_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:188]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA33_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:189]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA33_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:190]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA33_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:191]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA33_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:192]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA31_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:193]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA31_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:194]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA31_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:195]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA31_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:196]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA29_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:217]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA29_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:218]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA29_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:219]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA29_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:220]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA28_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:221]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA28_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:222]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA28_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:223]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA28_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:224]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:226]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:227]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:228]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:229]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:230]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_N'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:231]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:232]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_P'. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:233]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:233]
+CRITICAL WARNING: [Common 17-163] Missing value for option 'objects', please type 'set_property -help' for usage info. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:475]
+CRITICAL WARNING: [Designutils 20-1307] Command '3set_property' is not supported in the xdc constraint file. [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc:620]
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/arthur/crypto/hw/hw.srcs/constrs_1/imports/xdc/zcu104.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [/home/arthur/crypto/hw/hw.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2788.059 ; gain = 0.000 ; free physical = 8296 ; free virtual = 60597
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2788.059 ; gain = 0.000 ; free physical = 8296 ; free virtual = 60597
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2788.059 ; gain = 422.395 ; free physical = 8313 ; free virtual = 60668
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2203.713; parent = 1949.823; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3772.223; parent = 2788.062; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2788.059 ; gain = 422.395 ; free physical = 8313 ; free virtual = 60668
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2203.713; parent = 1949.823; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3772.223; parent = 2788.062; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/top_module_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps8_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2788.059 ; gain = 422.395 ; free physical = 8313 ; free virtual = 60671
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2203.713; parent = 1949.823; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3772.223; parent = 2788.062; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2788.059 ; gain = 422.395 ; free physical = 8314 ; free virtual = 60673
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2203.713; parent = 1949.823; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3772.223; parent = 2788.062; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2788.059 ; gain = 422.395 ; free physical = 8293 ; free virtual = 60659
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2203.713; parent = 1949.823; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3772.223; parent = 2788.062; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 3254.574 ; gain = 888.910 ; free physical = 7625 ; free virtual = 60080
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2767.557; parent = 2514.161; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4238.738; parent = 3254.578; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 3254.574 ; gain = 888.910 ; free physical = 7625 ; free virtual = 60079
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2767.693; parent = 2514.298; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4238.738; parent = 3254.578; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 3274.613 ; gain = 908.949 ; free physical = 7614 ; free virtual = 60071
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2768.916; parent = 2515.521; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4258.777; parent = 3274.617; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7423 ; free virtual = 59937
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.309; parent = 2515.966; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7425 ; free virtual = 59940
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.348; parent = 2516.005; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7425 ; free virtual = 59939
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.605; parent = 2516.263; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7424 ; free virtual = 59939
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.605; parent = 2516.263; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7422 ; free virtual = 59937
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.605; parent = 2516.263; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7412 ; free virtual = 59927
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.629; parent = 2516.286; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |design_1_xbar_0              |         1|
+|2     |design_1_auto_ds_0           |         1|
+|3     |design_1_auto_pc_0           |         1|
+|4     |design_1_auto_ds_1           |         1|
+|5     |design_1_auto_pc_1           |         1|
+|6     |design_1_axi_dma_0_0         |         1|
+|7     |design_1_axi_smc_0           |         1|
+|8     |design_1_rst_ps8_0_100M_0    |         1|
+|9     |design_1_top_module_0_0      |         1|
+|10    |design_1_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |design_1_auto_ds           |     2|
+|3     |design_1_auto_pc           |     2|
+|5     |design_1_axi_dma_0         |     1|
+|6     |design_1_axi_smc           |     1|
+|7     |design_1_rst_ps8_0_100M    |     1|
+|8     |design_1_top_module_0      |     1|
+|9     |design_1_xbar              |     1|
+|10    |design_1_zynq_ultra_ps_e_0 |     1|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 3280.551 ; gain = 914.887 ; free physical = 7417 ; free virtual = 59932
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2769.660; parent = 2516.317; children = 254.720
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4264.715; parent = 3280.555; children = 984.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 3280.551 ; gain = 835.012 ; free physical = 7486 ; free virtual = 59996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 3280.559 ; gain = 914.887 ; free physical = 7621 ; free virtual = 60125
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3280.559 ; gain = 0.000 ; free physical = 7761 ; free virtual = 60232
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3321.176 ; gain = 0.000 ; free physical = 7624 ; free virtual = 60122
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: b83e8c2a
+INFO: [Common 17-83] Releasing license: Synthesis
+58 Infos, 227 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 3335.113 ; gain = 2006.426 ; free physical = 7826 ; free virtual = 60309
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/arthur/crypto/hw/hw.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 12 15:00:38 2023...

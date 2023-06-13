@@ -1,49 +1,40 @@
-21:55:37 **** Incremental Build of project design_1_wrapper ****
-buildplatform.sh 38891 design_1_wrapper no_domain_build 
-XSDB Server Channel: tcfchan#10
-21:55:54 **** Incremental Build of configuration Debug for project Maplog ****
+Nothing to build in platform 'cryptolmap'
+
+01:52:16 **** Incremental Build of configuration Debug for project app ****
 make all 
 Building file: ../src/helloworld.c
 Invoking: ARM v8 gcc compiler
-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/arthur/mapalogistico/sw/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/arthur/crypto/sw/cryptolmap/export/cryptolmap/sw/cryptolmap/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:110:30: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  110 |         Xil_DCacheFlushRange((u32)image_tx, IMAGE_SIZE);
-      |                              ^
-../src/helloworld.c:111:30: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  111 |         Xil_DCacheFlushRange((u32)hash_rx, IMAGE_SIZE);
-      |                              ^
-../src/helloworld.c:114:48: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  114 |         stat = XAxiDma_SimpleTransfer(&axiDMA, (u32) image_tx, IMAGE_SIZE, XAXIDMA_DMA_TO_DEVICE);
-      |                                                ^
-../src/helloworld.c:119:48: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  119 |         stat = XAxiDma_SimpleTransfer(&axiDMA, (u32) hash_rx, HASH_SIZE, XAXIDMA_DEVICE_TO_DMA);
-      |                                                ^
-../src/helloworld.c:125:35: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
-  125 |         Xil_DCacheInvalidateRange((u32)hash_rx, HASH_SIZE);
-      |                                   ^
+../src/helloworld.c:368:26: warning: unused variable 'permuted_image' [-Wunused-variable]
+  368 |                 uint8_t* permuted_image = permutation(logmap_perm(dt,x,mu));
+      |                          ^~~~~~~~~~~~~~
+../src/helloworld.c:242:13: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
+  242 |         u32 Value;
+      |             ^~~~~
+../src/helloworld.c:354:36: warning: 'mperm.f' may be used uninitialized [-Wmaybe-uninitialized]
+  354 |                 printf("%f\n",mperm.f);
+      |                               ~~~~~^~
+../src/helloworld.c:353:24: note: 'mperm' declared here
+  353 |                 condIn mperm;
+      |                        ^~~~~
 Finished building: ../src/helloworld.c
  
-Building file: ../src/platform.c
-Invoking: ARM v8 gcc compiler
-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/arthur/mapalogistico/sw/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
- 
-Building target: Maplog.elf
+Building target: app.elf
 Invoking: ARM v8 gcc linker
-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/arthur/mapalogistico/sw/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bsplib/lib -o "Maplog.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: Maplog.elf
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/arthur/crypto/sw/cryptolmap/export/cryptolmap/sw/cryptolmap/standalone_psu_cortexa53_0/bsplib/lib -o "app.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: app.elf
  
 Invoking: ARM v8 Print Size
-aarch64-none-elf-size Maplog.elf  |tee "Maplog.elf.size"
+aarch64-none-elf-size app.elf  |tee "app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  99940	 266928	  23772	 390640	  5f5f0	Maplog.elf
-Finished building: Maplog.elf.size
+ 127899	 269936	  23797	 421632	  66f00	app.elf
+Finished building: app.elf.size
  
-21:55:56 **** Incremental Build of configuration Debug for project Maplog_system ****
+01:52:19 **** Incremental Build of configuration Debug for project app_system ****
 make all 
 Generating bif file for the system project
-Executing command '::scw::generate_bif -xpfm /home/arthur/mapalogistico/sw/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm -domains standalone_psu_cortexa53_0 -bifpath /home/arthur/mapalogistico/sw/Maplog_system/Debug/system.bif' on XSCT
-sdcard_gen --xpfm /home/arthur/mapalogistico/sw/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif /home/arthur/mapalogistico/sw/Maplog_system/Debug/system.bif --bitstream /home/arthur/mapalogistico/sw/Maplog/_ide/bitstream/design_1_wrapper.bit --elf /home/arthur/mapalogistico/sw/Maplog/Debug/Maplog.elf,psu_cortexa53_0
-creating BOOT.BIN using /home/arthur/mapalogistico/sw/Maplog/_ide/bitstream/design_1_wrapper.bit
-Running /tools/Xilinx/Vitis/2023.1/bin/bootgen -arch zynqmp -image /home/arthur/mapalogistico/sw/Maplog_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+Executing command '::scw::generate_bif -xpfm /home/arthur/crypto/sw/cryptolmap/export/cryptolmap/cryptolmap.xpfm -domains standalone_psu_cortexa53_0 -bifpath /home/arthur/crypto/sw/app_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/arthur/crypto/sw/cryptolmap/export/cryptolmap/cryptolmap.xpfm --sys_config cryptolmap --bif /home/arthur/crypto/sw/app_system/Debug/system.bif --bitstream /home/arthur/crypto/sw/app/_ide/bitstream/cryptolmap.bit --elf /home/arthur/crypto/sw/app/Debug/app.elf,psu_cortexa53_0
+creating BOOT.BIN using /home/arthur/crypto/sw/app/_ide/bitstream/cryptolmap.bit
+Running /tools/Xilinx/Vitis/2022.2/bin/bootgen -arch zynqmp -image /home/arthur/crypto/sw/app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

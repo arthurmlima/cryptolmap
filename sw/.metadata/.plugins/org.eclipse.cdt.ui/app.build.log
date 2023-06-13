@@ -1,0 +1,34 @@
+01:52:16 **** Incremental Build of configuration Debug for project app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/arthur/crypto/sw/cryptolmap/export/cryptolmap/sw/cryptolmap/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:368:26: warning: unused variable 'permuted_image' [-Wunused-variable]
+  368 |                 uint8_t* permuted_image = permutation(logmap_perm(dt,x,mu));
+      |                          ^~~~~~~~~~~~~~
+../src/helloworld.c:242:13: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
+  242 |         u32 Value;
+      |             ^~~~~
+../src/helloworld.c:354:36: warning: 'mperm.f' may be used uninitialized [-Wmaybe-uninitialized]
+  354 |                 printf("%f\n",mperm.f);
+      |                               ~~~~~^~
+../src/helloworld.c:353:24: note: 'mperm' declared here
+  353 |                 condIn mperm;
+      |                        ^~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: app.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/arthur/crypto/sw/cryptolmap/export/cryptolmap/sw/cryptolmap/standalone_psu_cortexa53_0/bsplib/lib -o "app.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: app.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 127899	 269936	  23797	 421632	  66f00	app.elf
+Finished building: app.elf.size
+ 
+
+01:52:17 Build Finished (took 1s.119ms)
+

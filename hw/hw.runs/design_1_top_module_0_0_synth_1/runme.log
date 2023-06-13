@@ -1,0 +1,850 @@
+
+*** Running vivado
+    with args -log design_1_top_module_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_module_0_0.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_top_module_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1320.844 ; gain = 0.023 ; free physical = 171 ; free virtual = 61055
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/arthur/crypto/hw/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_top_module_0_0
+Command: synth_design -top design_1_top_module_0_0 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27662
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2565.246 ; gain = 238.832 ; free physical = 243 ; free virtual = 49064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1625.944; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3576.602; parent = 2578.125; children = 998.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_module_0_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_top_module_0_0/synth/design_1_top_module_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_module' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_control_s_axi' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_control_s_axi.v:218]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_control_s_axi' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_entry_proc' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_entry_proc.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_entry_proc' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_entry_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_get_image_stream' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_get_image_stream.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_get_image_stream_Pipeline_VITIS_LOOP_17_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_get_image_stream_Pipeline_VITIS_LOOP_17_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_flow_control_loop_pipe_sequential_init' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_flow_control_loop_pipe_sequential_init' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_get_image_stream_Pipeline_VITIS_LOOP_17_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_get_image_stream_Pipeline_VITIS_LOOP_17_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_regslice_both' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_regslice_both' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_regslice_both__parameterized0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_regslice_both__parameterized0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_regslice_both__parameterized1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_regslice_both__parameterized1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_get_image_stream' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_get_image_stream.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_sha256_64_s' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256_64_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_sha256_top_64_256_s' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256_top_64_256_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_preProcessing' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_FULL_BLKS.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_PAD_ONE' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_PAD_ONE.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_PAD_ONE' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_PAD_ONE.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_preProcessing' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_dup_strm' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dup_strm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_dup_strm_Pipeline_VITIS_LOOP_506_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dup_strm_Pipeline_VITIS_LOOP_506_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_dup_strm_Pipeline_VITIS_LOOP_506_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dup_strm_Pipeline_VITIS_LOOP_506_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_dup_strm' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dup_strm.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_generateMsgSchedule' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generateMsgSchedule.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mux_164_32_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mux_164_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mux_164_32_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mux_164_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT16.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generateMsgSchedule_Pipeline_LOOP_SHA256_PREPARE_WT64.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_generateMsgSchedule' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generateMsgSchedule.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_sha256Digest_256_s' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256Digest_256_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mux_646_32_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mux_646_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mux_646_32_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mux_646_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256Digest_256_Pipeline_LOOP_SHA256_UPDATE_64_ROUNDS.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_sha256Digest_256_s' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256Digest_256_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w512_d4097_D' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w512_d4097_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w512_d4097_D_ram' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w512_d4097_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w512_d4097_D_ram' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w512_d4097_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w512_d4097_D' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w512_d4097_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w64_d32_D' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w64_d32_D_ram' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w64_d32_D_ram' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w64_d32_D' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w1_d32_D' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d32_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w1_d32_D_ram' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d32_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w1_d32_D_ram' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d32_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w1_d32_D' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d32_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w32_d32_D' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d32_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w32_d32_D_ram' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d32_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w32_d32_D_ram' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d32_D.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w32_d32_D' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d32_D.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_start_for_dup_strm_U0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_dup_strm_U0.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_start_for_dup_strm_U0_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_dup_strm_U0.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_start_for_dup_strm_U0_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_dup_strm_U0.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_start_for_dup_strm_U0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_dup_strm_U0.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_start_for_generateMsgSchedule_U0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_generateMsgSchedule_U0.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_start_for_generateMsgSchedule_U0_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_generateMsgSchedule_U0.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_start_for_generateMsgSchedule_U0_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_generateMsgSchedule_U0.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_start_for_generateMsgSchedule_U0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_generateMsgSchedule_U0.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_start_for_sha256Digest_256_U0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_sha256Digest_256_U0.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_start_for_sha256Digest_256_U0_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_sha256Digest_256_U0.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_start_for_sha256Digest_256_U0_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_sha256Digest_256_U0.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_start_for_sha256Digest_256_U0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_start_for_sha256Digest_256_U0.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_sha256_top_64_256_s' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256_top_64_256_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_sha256_64_s' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sha256_64_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_set_hash_stream' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_set_hash_stream_Pipeline_VITIS_LOOP_40_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream_Pipeline_VITIS_LOOP_40_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_set_hash_stream_Pipeline_VITIS_LOOP_40_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream_Pipeline_VITIS_LOOP_40_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_set_hash_stream_Pipeline_VITIS_LOOP_44_2' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream_Pipeline_VITIS_LOOP_44_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_set_hash_stream_Pipeline_VITIS_LOOP_44_2' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream_Pipeline_VITIS_LOOP_44_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_set_hash_stream_Pipeline_VITIS_LOOP_49_3' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream_Pipeline_VITIS_LOOP_49_3.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_set_hash_stream_Pipeline_VITIS_LOOP_49_3' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream_Pipeline_VITIS_LOOP_49_3.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fadd_32ns_32ns_32_4_full_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:78971]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fadd_32ns_32ns_32_4_full_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fdiv_32ns_32ns_32_9_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fdiv_32ns_32ns_32_9_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_uitofp_32ns_32_3_no_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_uitofp_32ns_32_3_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_uitofp_32ns_32_3_no_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_uitofp_32ns_32_3_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_uitofp_32ns_32_3_no_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_uitofp_32ns_32_3_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_uitofp_32ns_32_3_no_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_uitofp_32ns_32_3_no_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_set_hash_stream' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_set_hash_stream.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_logmap' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_logmap.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_bkb' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_bkb.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_bkb.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_bkb.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_bkb' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_bkb.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROMcud' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROMcud.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROMcud.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROMcud.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROMcud' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log0_lut_table_array_V_ROMcud.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4dEe' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4dEe.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4dEe.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4dEe.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4dEe' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4dEe.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6eOg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6eOg.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6eOg.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6eOg.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6eOg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6eOg.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_fYi' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_fYi.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_fYi.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_fYi.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_fYi' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_fYi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arrg8j' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arrg8j.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arrg8j.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arrg8j.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arrg8j' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arrg8j.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arrayhbi' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arrayhbi.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arrayhbi.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arrayhbi.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arrayhbi' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arrayhbi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_39ns_4ns_43_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_39ns_4ns_43_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_39ns_4ns_43_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_39ns_4ns_43_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_6ns_41ns_47_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_6ns_41ns_47_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_6ns_41ns_47_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_6ns_41ns_47_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_6ns_44ns_50_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_6ns_44ns_50_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_6ns_44ns_50_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_6ns_44ns_50_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_9s_45ns_52_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_9s_45ns_52_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_9s_45ns_52_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_9s_45ns_52_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_23ns_23ns_46_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_23ns_23ns_46_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_23ns_23ns_46_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_23ns_23ns_46_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_10s_36s_36_1_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_10s_36s_36_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_10s_36s_36_1_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_10s_36s_36_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_mul_25s_6ns_25_4_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_25s_6ns_25_4_1.v:32]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_mul_25s_6ns_25_4_1_DSP48_0' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_25s_6ns_25_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_mul_25s_6ns_25_4_1_DSP48_0' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_25s_6ns_25_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_mul_25s_6ns_25_4_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_25s_6ns_25_4_1.v:32]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mac_muladd_13s_12ns_16s_25_4_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:47]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mac_muladd_13s_12ns_16s_25_4_1_DSP48_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mac_muladd_13s_12ns_16s_25_4_1_DSP48_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mac_muladd_13s_12ns_16s_25_4_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:47]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_mul_18ns_18ns_36_4_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:32]
+INFO: [Synth 8-6157] synthesizing module 'top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_mul_mul_18ns_18ns_36_4_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_pow_generic_float_s' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_pow_generic_float_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_generic_modf_float_s' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_modf_float_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_generic_modf_float_s_mask_table_ROM_AUTO_1R' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_modf_float_s_mask_table_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './top_module_generic_modf_float_s_mask_table_ROM_AUTO_1R.dat' is read successfully [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_modf_float_s_mask_table_ROM_AUTO_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_generic_modf_float_s_mask_table_ROM_AUTO_1R' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_modf_float_s_mask_table_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_generic_modf_float_s' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_modf_float_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_generic_remainder_float_s' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_remainder_float_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_generic_remainder_float_s' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_remainder_float_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fsub_32ns_32ns_32_4_full_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fsub_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fsub_32ns_32ns_32_4_full_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fsub_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fmul_32ns_32ns_32_3_max_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fmul_32ns_32ns_32_3_max_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_sitofp_32ns_32_3_no_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sitofp_32ns_32_3_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_sitofp_32ns_32_3_no_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_sitofp_32ns_32_3_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_sitofp_32ns_32_3_no_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_sitofp_32ns_32_3_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_sitofp_32ns_32_3_no_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_sitofp_32ns_32_3_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fptrunc_64ns_32_2_no_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fptrunc_64ns_32_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fptrunc_64ns_32_2_no_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fptrunc_64ns_32_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fptrunc_64ns_32_2_no_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fptrunc_64ns_32_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fptrunc_64ns_32_2_no_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fptrunc_64ns_32_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fpext_32ns_64_2_no_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fpext_32ns_64_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fpext_32ns_64_2_no_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fpext_32ns_64_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fpext_32ns_64_2_no_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_fpext_32ns_64_2_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fpext_32ns_64_2_no_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fpext_32ns_64_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_dsub_64ns_64ns_64_5_full_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dsub_64ns_64ns_64_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_dsub_64ns_64ns_64_5_full_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dsub_64ns_64ns_64_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_dmul_64ns_64ns_64_5_max_dsp_1' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dmul_64ns_64ns_64_5_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/ip/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_dmul_64ns_64ns_64_5_max_dsp_1' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_dmul_64ns_64ns_64_5_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_regslice_both__parameterized2' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_regslice_both__parameterized2' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'top_module_regslice_both__parameterized3' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_regslice_both__parameterized3' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_logmap' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_logmap.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w32_d5_S' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d5_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w32_d5_S_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d5_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w32_d5_S_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d5_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w32_d5_S' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d5_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w64_d32768_A' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32768_A.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w64_d32768_A_ram' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32768_A.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w64_d32768_A_ram' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32768_A.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w64_d32768_A' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d32768_A.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w64_d1_S' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d1_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w64_d1_S_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d1_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w64_d1_S_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d1_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w64_d1_S' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w64_d1_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w1_d1_S' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d1_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w1_d1_S_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d1_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w1_d1_S_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d1_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w1_d1_S' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d1_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w256_d1_S' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w256_d1_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w256_d1_S_ShiftReg' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w256_d1_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w256_d1_S_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w256_d1_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w256_d1_S' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w256_d1_S.v:10]
+INFO: [Synth 8-6157] synthesizing module 'top_module_fifo_w1_d2_S' [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d2_S.v:10]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w1_d2_S_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d2_S.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w1_d2_S' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w1_d2_S.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'top_module_fifo_w32_d2_S_ShiftReg' (0#1) [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w32_d2_S.v:111]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_control_s_axi.v:289]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_15_fu_461_p4_reg' and it is trimmed from '25' to '24' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_generic_remainder_float_s.v:708]
+WARNING: [Synth 8-7129] Port addr[0] in module top_module_fifo_w256_d1_S_ShiftReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module top_module_fifo_w1_d1_S_ShiftReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module top_module_fifo_w64_d1_S_ShiftReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized123 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized123 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized123 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized123 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized123 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[18] in module carry_chain__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized95 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized95 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized95 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized95 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized95 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized125 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized155 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized155 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized155 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized155 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized155 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized121 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized121 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized121 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized121 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized121 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized119 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized119 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized119 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized119 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized119 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MANT_CASC_IN[47] in module flt_mult_round__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MANT_CASC_IN[46] in module flt_mult_round__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MANT_CASC_IN[45] in module flt_mult_round__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MANT_CASC_IN[44] in module flt_mult_round__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MANT_CASC_IN[43] in module flt_mult_round__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MANT_CASC_IN[42] in module flt_mult_round__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 2862.090 ; gain = 535.676 ; free physical = 911 ; free virtual = 48932
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3860.570; parent = 2862.094; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2862.090 ; gain = 535.676 ; free physical = 839 ; free virtual = 48861
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3860.570; parent = 2862.094; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2862.090 ; gain = 535.676 ; free physical = 865 ; free virtual = 48887
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3860.570; parent = 2862.094; children = 998.477
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2862.090 ; gain = 0.000 ; free physical = 405 ; free virtual = 48461
+INFO: [Netlist 29-17] Analyzing 3719 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_top_module_0_0/constraints/top_module_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3026.934 ; gain = 0.000 ; free physical = 150 ; free virtual = 46761
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ip/design_1_top_module_0_0/constraints/top_module_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/arthur/crypto/hw/hw.runs/design_1_top_module_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/arthur/crypto/hw/hw.runs/design_1_top_module_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3026.934 ; gain = 0.000 ; free physical = 171 ; free virtual = 46762
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 61 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 16 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 7 instances
+  FDE => FDRE: 38 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.75 . Memory (MB): peak = 3026.934 ; gain = 0.000 ; free physical = 286 ; free virtual = 46832
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:18 ; elapsed = 00:01:28 . Memory (MB): peak = 3026.934 ; gain = 700.520 ; free physical = 287 ; free virtual = 45580
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4025.414; parent = 3026.938; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:18 ; elapsed = 00:01:28 . Memory (MB): peak = 3026.934 ; gain = 700.520 ; free physical = 291 ; free virtual = 45569
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4025.414; parent = 3026.938; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/arthur/crypto/hw/hw.runs/design_1_top_module_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:28 . Memory (MB): peak = 3026.934 ; gain = 700.520 ; free physical = 247 ; free virtual = 45526
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4025.414; parent = 3026.938; children = 998.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'top_module_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'top_module_control_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'i_5_reg_3149_reg' and it is trimmed from '4' to '3' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing_Pipeline_LOOP_SHA256_GEN_COPY_TAIL_PAD_ONE.v:671]
+WARNING: [Synth 8-3936] Found unconnected internal register 'len_reg_634_reg' and it is trimmed from '64' to '61' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_preProcessing.v:390]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'raddr_reg_reg' and it is trimmed from '13' to '12' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_fifo_w512_d4097_D.v:191]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'top_module_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'top_module_control_s_axi'
+INFO: [Synth 8-6793] RAM ("top_module_fifo_w64_d32768_A_ram:/mem_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 3 
+INFO: [Synth 8-6793] RAM ("top_module_fifo_w64_d32768_A_ram:/mem_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 3 
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 9 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 1 for RAM "top_module_fifo_w64_d32768_A_ram:/mem_reg"
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:31 ; elapsed = 00:01:43 . Memory (MB): peak = 3026.934 ; gain = 700.520 ; free physical = 2547 ; free virtual = 48664
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4025.414; parent = 3026.938; children = 998.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'top_module_fadd_32ns_32ns_32_4_full_dsp_1:/top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'top_module_fadd_32ns_32ns_32_4_full_dsp_1:/top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_fadd_32ns_32ns_32_4_full_dsp_1:/top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'top_module_fadd_32ns_32ns_32_4_full_dsp_1:/top_module_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized28) to 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized28) to 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized0) to 'top_module_fdiv_32ns_32ns_32_9_no_dsp_1:/top_module_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized28) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized28) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'top_module_uitofp_32ns_32_3_no_dsp_1:/top_module_uitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fsub_32ns_32ns_32_4_full_dsp_1_U218/top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/logmap_U0/fsub_32ns_32ns_32_4_full_dsp_1_U218/top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fsub_32ns_32ns_32_4_full_dsp_1_U218/top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/logmap_U0/fsub_32ns_32ns_32_4_full_dsp_1_U218/top_module_fsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_fmul_32ns_32ns_32_3_max_dsp_1:/top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'top_module_fmul_32ns_32ns_32_3_max_dsp_1:/top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'top_module_fmul_32ns_32ns_32_3_max_dsp_1:/top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'top_module_fmul_32ns_32ns_32_3_max_dsp_1:/top_module_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized28) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized28) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/sitofp_32ns_32_3_no_dsp_1_U221/top_module_sitofp_32ns_32_3_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/fptrunc_64ns_32_2_no_dsp_1_U222/top_module_fptrunc_64ns_32_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fpext_32ns_64_2_no_dsp_1_U223/top_module_fpext_32ns_64_2_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/fpext_32ns_64_2_no_dsp_1_U223/top_module_fpext_32ns_64_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fpext_32ns_64_2_no_dsp_1_U223/top_module_fpext_32ns_64_2_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/fpext_32ns_64_2_no_dsp_1_U223/top_module_fpext_32ns_64_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/fpext_32ns_64_2_no_dsp_1_U223/top_module_fpext_32ns_64_2_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'inst/logmap_U0/fpext_32ns_64_2_no_dsp_1_U223/top_module_fpext_32ns_64_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/SUB_DELAY' (delay__parameterized0) to 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/SUBTRACT_PREADD_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/logmap_U0/dsub_64ns_64ns_64_5_full_dsp_1_U224/top_module_dsub_64ns_64ns_64_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_INC_DELAY' (delay__parameterized0) to 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized87) to 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized87) to 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/logmap_U0/dmul_64ns_64ns_64_5_max_dsp_1_U225/top_module_dmul_64ns_64ns_64_5_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/regslice_both_output_stream_V_keep_V_U' (top_module_regslice_both__parameterized3) to 'inst/logmap_U0/regslice_both_output_stream_V_strb_V_U'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/regslice_both_output_stream_V_user_V_U' (top_module_regslice_both__parameterized1) to 'inst/logmap_U0/regslice_both_output_stream_V_id_V_U'
+INFO: [Synth 8-223] decloning instance 'inst/logmap_U0/regslice_both_output_stream_V_user_V_U' (top_module_regslice_both__parameterized1) to 'inst/logmap_U0/regslice_both_output_stream_V_dest_V_U'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg' and it is trimmed from '37' to '35' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:24]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_tmp_reg' and it is trimmed from '37' to '35' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:23]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/b_reg_reg' and it is trimmed from '18' to '1' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:22]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_13s_12ns_16s_25_4_1_U196/top_module_mac_muladd_13s_12ns_16s_25_4_1_DSP48_1_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_13s_12ns_16s_25_4_1_U196/top_module_mac_muladd_13s_12ns_16s_25_4_1_DSP48_1_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_13s_12ns_16s_25_4_1_U196/top_module_mac_muladd_13s_12ns_16s_25_4_1_DSP48_1_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mac_muladd_13s_12ns_16s_25_4_1.v:31]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/a_reg_reg' and it is trimmed from '18' to '1' bits. [/home/arthur/crypto/hw/hw.gen/sources_1/bd/design_1/ipshared/91c8/hdl/verilog/top_module_mul_mul_18ns_18ns_36_4_1.v:21]
+INFO: [Synth 8-6793] RAM ("inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 3 
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 36 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 8 and width 9 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 1 for RAM "inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg"
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[47]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[46]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[45]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[44]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[43]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[42]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[41]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[40]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[39]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[38]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[37]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[36]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[35]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[34]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[33]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[32]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[31]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[30]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[29]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[28]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[27]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[26]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[25]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[24]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[23]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[22]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[21]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[20]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[19]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[18]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (r_V_11_reg_1674_reg[17]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_tmp_reg) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[15]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[14]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[13]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[12]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[11]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[10]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[9]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[8]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[7]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[6]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[5]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[4]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[3]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[2]) is unused and will be removed from module top_module_pow_generic_float_s.
+WARNING: [Synth 8-3332] Sequential element (mul_mul_18ns_18ns_36_4_1_U197/top_module_mul_mul_18ns_18ns_36_4_1_DSP48_2_U/p_reg_reg[1]) is unused and will be removed from module top_module_pow_generic_float_s.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:39 ; elapsed = 00:04:56 . Memory (MB): peak = 3326.043 ; gain = 999.629 ; free physical = 10072 ; free virtual = 60475
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1644.294; parent = 1545.824; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4324.523; parent = 3326.047; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:51 ; elapsed = 00:05:11 . Memory (MB): peak = 3415.746 ; gain = 1089.332 ; free physical = 9475 ; free virtual = 59901
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1698.781; parent = 1570.867; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4414.227; parent = 3415.750; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:01 ; elapsed = 00:05:20 . Memory (MB): peak = 3477.770 ; gain = 1151.355 ; free physical = 9369 ; free virtual = 59798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1768.523; parent = 1640.609; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4476.250; parent = 3477.773; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_35 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_39 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_43 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_47 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_55 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/msg_strm_U/U_top_module_fifo_w64_d32768_A_ram/mem_reg_bram_56 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_V_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_V_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_V_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_V_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_V_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_V_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_V_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_V_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:22 ; elapsed = 00:05:42 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9390 ; free virtual = 59828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:31 ; elapsed = 00:05:52 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9350 ; free virtual = 59794
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:31 ; elapsed = 00:05:52 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9392 ; free virtual = 59835
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:37 ; elapsed = 00:05:58 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9326 ; free virtual = 59779
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:38 ; elapsed = 00:05:58 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9326 ; free virtual = 59778
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:38 ; elapsed = 00:05:59 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9359 ; free virtual = 59811
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:38 ; elapsed = 00:05:59 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9359 ; free virtual = 59811
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                       | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e2_wrapper                                   | Dynamic             | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e2_wrapper__parameterized0                   | Dynamic             | -      | -      | -      | -      | 17     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e2_wrapper__parameterized2                   | (PCIN>>17+C+A*B)'   | 0      | 17     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e2_wrapper__parameterized3                   | C+A'*B'             | 26     | 17     | 17     | -      | 17     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
+|dsp48e2_wrapper__parameterized4                   | PCIN>>17+C+A*B'     | 0      | 17     | -      | -      | 17     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e2_wrapper__parameterized5                   | (PCIN>>17+C'+A*B')' | 0      | 17     | -      | -      | 45     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp48e2_wrapper__parameterized1                   | A:B+C               | 30     | 18     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized6_437               | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized5                   | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized4                   | A:B                 | 29     | 18     | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized6                   | C+A:B               | 0      | 2      | 47     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_388               | A*B                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_389               | PCIN>>17+A*B        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_386               | PCIN+A:B+C          | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1                   | A*B                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2                   | PCIN>>17+A*B        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3                   | PCIN+A:B+C          | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_365                               | Dynamic             | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_315               | C+A*B               | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | (A*B)'              | 10     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|top_module_pow_generic_float_s                    | (PCIN>>17+A*B)'     | 17     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|top_module_mac_muladd_13s_12ns_16s_25_4_1_DSP48_1 | (C+(A'*B)')'        | 30     | 12     | 48     | -      | 25     | 1    | 0    | 0    | -    | -     | 1    | 1    | 
+|top_module_pow_generic_float_s                    | A*B                 | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | PCIN>>17+A*B        | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_module_mul_23ns_23ns_46_1_1                   | A*B                 | 23     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_module_mul_23ns_23ns_46_1_1                   | PCIN>>17+A*B        | 23     | 6      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | A'*B'               | 17     | 6      | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | PCIN>>17+A'*B'      | 24     | 6      | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | A*B                 | 17     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | A*B''               | 10     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | A*B'                | 17     | 0      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | PCIN>>17+A*B''      | 17     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|top_module_pow_generic_float_s                    | Dynamic             | -      | -      | -      | -      | 35     | -    | -    | -    | -    | -     | 0    | 1    | 
+|top_module_pow_generic_float_s                    | ((A'*B'')')'        | 30     | 6      | -      | -      | 25     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|dsp48e1_wrapper_290                               | Dynamic             | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_244               | C+A*B               | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                                   | Dynamic             | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0                   | C+A*B               | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++--------------------------------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |   194|
+|2     |DSP48E1         |    16|
+|3     |DSP_ALU         |    22|
+|6     |DSP_A_B_DATA    |    22|
+|15    |DSP_C_DATA      |    22|
+|17    |DSP_MULTIPLIER  |    22|
+|19    |DSP_M_DATA      |    22|
+|21    |DSP_OUTPUT      |    22|
+|26    |DSP_PREADD      |    22|
+|27    |DSP_PREADD_DATA |    22|
+|30    |LUT1            |   333|
+|31    |LUT2            |  2365|
+|32    |LUT3            |  2389|
+|33    |LUT4            |  1453|
+|34    |LUT5            |  1333|
+|35    |LUT6            | 11226|
+|36    |MUXCY           |  1940|
+|37    |MUXF7           |  4229|
+|38    |MUXF8           |  2097|
+|39    |RAM16X1D        |     6|
+|40    |RAM32M          |     1|
+|41    |RAM32M16        |     5|
+|42    |RAM64M8         |  4672|
+|43    |RAM64X1D        |    64|
+|44    |RAMB18E2        |     5|
+|49    |RAMB36E2        |    58|
+|60    |SRL16E          |   182|
+|61    |XORCY           |  1605|
+|62    |FDE             |    38|
+|63    |FDRE            |  8809|
+|64    |FDSE            |   229|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:38 ; elapsed = 00:06:00 . Memory (MB): peak = 3597.965 ; gain = 1271.551 ; free physical = 9360 ; free virtual = 59811
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1804.941; parent = 1677.027; children = 143.626
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4596.445; parent = 3597.969; children = 998.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 59 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:14 ; elapsed = 00:05:36 . Memory (MB): peak = 3597.965 ; gain = 1106.707 ; free physical = 9386 ; free virtual = 59850
+Synthesis Optimization Complete : Time (s): cpu = 00:05:39 ; elapsed = 00:06:00 . Memory (MB): peak = 3597.973 ; gain = 1271.551 ; free physical = 9386 ; free virtual = 59850
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3597.973 ; gain = 0.000 ; free physical = 9401 ; free virtual = 59868
+INFO: [Netlist 29-17] Analyzing 14889 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log0_lut_table_array_V_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_V_U/q0_reg_0 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_V_U/q0_reg_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_V_U/q0_reg_0 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_V_U/q0_reg_1 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/logmap_U0/grp_pow_generic_float_s_fu_204/pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_V_U/q0_reg has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3737.727 ; gain = 0.000 ; free physical = 9211 ; free virtual = 59681
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5147 instances were transformed.
+  (CARRY4) => CARRY8: 323 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 16 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 22 instances
+  FDE => FDRE: 38 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 5 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 4672 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 64 instances
+
+Synth Design complete, checksum: 507a3492
+INFO: [Common 17-83] Releasing license: Synthesis
+359 Infos, 161 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:06:21 ; elapsed = 00:06:43 . Memory (MB): peak = 3737.727 ; gain = 2416.883 ; free physical = 9494 ; free virtual = 59964
+INFO: [Common 17-1381] The checkpoint '/home/arthur/crypto/hw/hw.runs/design_1_top_module_0_0_synth_1/design_1_top_module_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_top_module_0_0, cache-ID = b52653de18f1e907
+INFO: [Coretcl 2-1174] Renamed 763 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/arthur/crypto/hw/hw.runs/design_1_top_module_0_0_synth_1/design_1_top_module_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_top_module_0_0_utilization_synth.rpt -pb design_1_top_module_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 12 14:59:21 2023...

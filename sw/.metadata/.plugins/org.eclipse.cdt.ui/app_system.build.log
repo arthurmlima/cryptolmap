@@ -1,0 +1,10 @@
+01:52:19 **** Incremental Build of configuration Debug for project app_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/arthur/crypto/sw/cryptolmap/export/cryptolmap/cryptolmap.xpfm -domains standalone_psu_cortexa53_0 -bifpath /home/arthur/crypto/sw/app_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/arthur/crypto/sw/cryptolmap/export/cryptolmap/cryptolmap.xpfm --sys_config cryptolmap --bif /home/arthur/crypto/sw/app_system/Debug/system.bif --bitstream /home/arthur/crypto/sw/app/_ide/bitstream/cryptolmap.bit --elf /home/arthur/crypto/sw/app/Debug/app.elf,psu_cortexa53_0
+creating BOOT.BIN using /home/arthur/crypto/sw/app/_ide/bitstream/cryptolmap.bit
+Running /tools/Xilinx/Vitis/2022.2/bin/bootgen -arch zynqmp -image /home/arthur/crypto/sw/app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+01:52:26 Build Finished (took 7s.234ms)
+
