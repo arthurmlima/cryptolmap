@@ -1,0 +1,37 @@
+#ifndef VAR_H
+#define VAR_H
+#include "xaxidma.h"
+#include "xtop_module.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xdebug.h"
+#include "encrypto.h"
+#include "xtop_module.h"
+
+#include "AxiTimer.h"
+#include "parameters.h"
+
+
+extern static XAxiDma AxiDma;		/* Instance of the XAxiDma */
+extern XAxiDma_Config *Config;
+
+extern static INTC Intc;	/* Instance of the Interrupt Controller */
+
+/*
+ * Flags interrupt handlers use to notify the application context the events.
+ */
+extern volatile int TxDone;
+extern volatile int RxDone;
+extern volatile int Error;
+
+extern XTop_module tm;
+extern XTop_module_Config *tm_cfg;
+
+
+extern u32 *TxBufferPtr;
+extern u32 *RxBufferPtr;
+extern int Status;
+
+
+
+#endif

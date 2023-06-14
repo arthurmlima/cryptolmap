@@ -1,0 +1,113 @@
+/*
+ * A special thanks to the author of a code from which we have based this one
+ * Cheers, laraujo !
+ */
+
+#include "AxiTimer.h"
+#include "parameters.h"
+AxiTimer::AxiTimer() {
+	// Initialize the timer hardware...
+	 XTmrCtr_Initialize(&m_AxiTimer, XPAR_TMRCTR_0_DEVICE_ID);
+
+	 //XTmrCtr_SetOptions(&m_AxiTimer, 0, XTC_AUTO_RELOAD_OPTION);
+
+	 // Get the clock period in seconds
+	 m_timerClockFreq = (double) XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ;
+	 m_clockPeriodSeconds = (double)1/m_timerClockFreq;
+
+}
+
+AxiTimer::~AxiTimer() {
+	// TODO Auto-generated destructor stub
+}
+
+
+
+unsigned int AxiTimer::startTimer() {
+	// Start timer 0 (There are two, but depends how you configured in vivado)
+	XTmrCtr_Reset(&m_AxiTimer,0);
+	m_tick_start =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	XTmrCtr_Start(&m_AxiTimer, 0);
+	return m_tick_start;
+}
+
+unsigned int AxiTimer::Get_end_tx() {
+	m_tick_end_tx =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_tx;
+}
+unsigned int AxiTimer::Get_end_hash() {
+	m_tick_end_hash =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_hash;
+}
+// Now there are two paths: perm and diff, lets go over perm first
+unsigned int AxiTimer::Get_end_perm_seq() {
+	m_tick_end_perm_seq =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_perm_seq;
+}
+unsigned int AxiTimer::Get_end_perm_sort() {
+	m_tick_end_perm_sort =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_perm_sort;
+}
+unsigned int AxiTimer::Get_end_perm_scramble() {
+	m_tick_end_perm_scramble =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_perm_scramble;
+}
+
+// now the other is simply at the RXD flag
+unsigned int AxiTimer::Get_end_diff() {
+	m_tick_end_diff =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_diff;
+}
+
+// This is a workaround : diff or perm elapsed first ?
+unsigned int AxiTimer::Get_init_bitxor() {
+	m_tick_init_bitxor =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_init_bitxor;
+}
+
+unsigned int AxiTimer::Get_end_bitxor() {
+	m_tick_end_bitxor =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_bitxor;
+}
+
+unsigned int AxiTimer::stopTimer() {
+	XTmrCtr_Stop(&m_AxiTimer, 0);
+	m_tick_last =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_last;
+}
+
+
+// measure time based on axi clock provided by the FPGA 
+double AxiTimer::Get_ts_tx() {
+	t_tx = (double)(m_tick_end_tx - m_tick_start) * m_clockPeriodSeconds;	
+	return t_tx;
+}
+double AxiTimer::Get_ts_hash() {
+	t_hash =(double)(m_tick_end_hash - m_tick_end_tx) * m_clockPeriodSeconds;
+	return t_hash;
+}
+double AxiTimer::Get_ts_perm_seq() {
+	t_perm_seq =(double)(m_tick_end_perm_seq - m_tick_end_hash) * m_clockPeriodSeconds;
+	return t_perm_seq;
+}
+double AxiTimer::Get_ts_perm_sort() {
+	t_perm_sort =(double)(m_tick_end_perm_sort - m_tick_end_perm_seq) * m_clockPeriodSeconds;
+	return t_perm_sort;
+}
+double AxiTimer::Get_ts_perm_scramble() {
+	t_perm_scramble= (double)(m_tick_end_perm_scramble - m_tick_end_perm_sort) * m_clockPeriodSeconds;
+	return t_perm_scramble;
+}
+double AxiTimer::Get_ts_diff() {
+	t_diff =(double)(m_tick_end_diff - m_tick_end_hash) * m_clockPeriodSeconds;
+	return t_diff;
+}
+
+double AxiTimer::Get_ts_bitxor() {
+	t_bitxor = (double)(m_tick_end_bitxor - m_tick_init_bitxor) * m_clockPeriodSeconds;
+	return t_bitxor;
+	}
+double AxiTimer::Get_ts_all() {
+	t_all = (double)(m_tick_end_bitxor - m_tick_start) * m_clockPeriodSeconds;
+	return t_all;
+	}

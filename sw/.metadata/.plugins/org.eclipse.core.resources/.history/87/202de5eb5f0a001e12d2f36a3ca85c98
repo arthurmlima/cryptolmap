@@ -1,0 +1,56 @@
+#include "var.h"
+/************************** Variable Definitions *****************************/
+/*
+ * Device instance definitions
+ */
+
+
+static XAxiDma AxiDma;		/* Instance of the XAxiDma */
+
+static INTC Intc;	/* Instance of the Interrupt Controller */
+
+/*
+ * Flags interrupt handlers use to notify the application context the events.
+ */
+volatile int TxDone;
+volatile int RxDone;
+volatile int Error;
+
+XTop_module tm;
+XTop_module_Config *tm_cfg;
+
+
+u32 *TxBufferPtr;
+u32 *RxBufferPtr;
+int Status;
+
+XAxiDma_Config *Config;
+
+
+
+/*****************************************************************************/
+/**
+*
+* Main function
+*
+* This function is the main entry of the interrupt test. It does the following:
+*	Set up the output terminal if UART16550 is in the hardware build
+*	Initialize the DMA engine
+*	Set up Tx and Rx channels
+*	Set up the interrupt system for the Tx and Rx interrupts
+*	Submit a transfer
+*	Wait for the transfer to finish
+*	Check transfer status
+*	Disable Tx and Rx interrupts
+*	Print test status and exit
+*
+* @param	None
+*
+* @return
+*		- XST_SUCCESS if example finishes successfully
+*		- XST_FAILURE if example fails.
+*
+* @note		None.
+*
+******************************************************************************/
+

@@ -28,14 +28,13 @@ float* logmap_perm(int dt, float x,float mu)
     return vlogmap;
 }
 
-uint8_t* permutation(float* v)
+uint8_t* permutation(float* v, uint8_t* image)
 {
-       int* sorted_index =  (int *)malloc(BSIZE * sizeof(int));                   // Allocate memory for the array
-
+       int* sorted_index =  (int *)malloc(BSIZE * sizeof(int));                  
        if (to_ord == NULL) {printf("Error! Low memory\n");}
        if (sorted_index == NULL) {printf("Error! Low memory\n");}
 
-       uint8_t* img = (uint8_t *)malloc(BSIZE * sizeof(uint8_t));          // Allocate memory for the array
+       uint8_t* img = (uint8_t *)malloc(BSIZE * sizeof(uint8_t));
        if (img == NULL) {printf("Error! Low memory\n");}
 
        for (int i = 0; i < BSIZE; i++)
@@ -50,7 +49,7 @@ uint8_t* permutation(float* v)
             img[i] = image[to_ord[i].index];
        }
 
-       return  img;
+       return img;
 }
 
 
@@ -78,3 +77,5 @@ uint8_t* cipherxor(uint8_t* permuted_image, uint8_t* precipher)
     }
     return cipher_image;
 }
+// q: how can I configure vscode to display the absolute directory of the folder i'm in ?
+// q: how can I configure vscode to display the absolute directory of the folder i'm in ?

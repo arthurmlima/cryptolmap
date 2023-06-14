@@ -12,6 +12,9 @@ update_compile_order -fileset sources_1
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.4 zynq_ultra_ps_e_0
 endgroup
+#startgroup
+#create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0
+#endgroup
 apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
 set_property CONFIG.PSU__USE__S_AXI_GP0 {1} [get_bd_cells zynq_ultra_ps_e_0]
 set_property  ip_repo_paths $scriptPath/ip_repo [current_project]
@@ -69,6 +72,30 @@ validate_bd_design
 startgroup
 set_property CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ {70} [get_bd_cells zynq_ultra_ps_e_0]
 endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (68 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (68 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_timer_0/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI]
+WARNING: [BD 41-1743] Cannot assign slave segment '/axi_timer_0/S_AXI/Reg' into address space '/zynq_ultra_ps_e_0/Data' because no available apertures exist. This assignment will be automatically excluded.
+Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/zynq_ultra_ps_e_0/Data' at <0xA002_0000 [ 64K ]>.
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
+endgroup
+set_property location {5 1966 -73} [get_bd_cells system_ila_0]
+set_property -dict [list \
+  CONFIG.C_MON_TYPE {INTERFACE} \
+  CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+] [get_bd_cells system_ila_0]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_0_AXIS] [get_bd_intf_pins top_module_0/input_stream]
+copy_bd_objs /  [get_bd_cells {system_ila_0}]
+set_property location {4.5 1741 662} [get_bd_cells system_ila_1]
+connect_bd_intf_net [get_bd_intf_pins system_ila_1/SLOT_0_AXIS] [get_bd_intf_pins top_module_0/output_stream]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (68 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (68 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
+endgroup
+
 
 update_compile_order -fileset sources_1
 make_wrapper -files [get_files $scriptPath/hw.srcs/sources_1/bd/design_1/design_1.bd] -top

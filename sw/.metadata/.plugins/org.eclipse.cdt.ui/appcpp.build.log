@@ -1,0 +1,6 @@
+06:42:59 **** Incremental Build of configuration Debug for project appcpp ****
+make all 
+make: Nothing to be done for 'all'.
+
+06:43:00 Build Finished (took 624ms)
+

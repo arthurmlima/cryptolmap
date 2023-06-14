@@ -21,3 +21,17 @@ domain active {zynqmp_pmufw}
 domain active {standalone_psu_cortexa53_0}
 platform generate -quick
 platform generate
+platform generate
+platform active {cryptolmap}
+platform config -updatehw {/home/arthur/crypto/hw/cryptolmap.xsa}
+platform generate -domains 
+platform active {cryptolmap}
+domain active {zynqmp_fsbl}
+bsp reload
+bsp setdriver -ip axi_timer_0 -driver none -ver {}
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains zynqmp_fsbl 
+platform clean
+platform generate

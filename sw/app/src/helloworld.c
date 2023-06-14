@@ -63,6 +63,8 @@
 #include "xdebug.h"
 #include "encrypto.h"
 #include "xtop_module.h"
+
+#include "AxiTimer.h"
 #include "parameters.h"
 #include "image.h"
 #ifdef XPAR_UARTNS550_0_BASEADDR
@@ -358,6 +360,11 @@ int main(void)
 
 		printf("%f\n",mperm.f);
 
+		while(RxDone==0);
+
+		for(int i=0;i<BSIZE;i++)
+			printf("%d\n",*((uint32_t *)RX_BUFFER_BASE+i));
+
 
 
 
@@ -366,6 +373,7 @@ int main(void)
 		while(1); // passar valor do hash;
 
 		uint8_t* permuted_image = permutation(logmap_perm(dt,x,mu));
+
 
 		while(1) //RX Done
 
@@ -381,11 +389,6 @@ int main(void)
 		//espera a imagem retornar o valor do hash,
 		//executa o mapa logistico
 		//espera fpga acabar o mapa diff
-
-
-
-
-
 
 
 

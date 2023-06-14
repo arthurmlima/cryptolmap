@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="appcpp" location="/home/arthur/crypto/sw/appcpp" platform="/home/arthur/crypto/sw/cryptolmap/export/cryptolmap/cryptolmap.xpfm" platformUID="xilinx:zcu104::0.0(custom)" systemProject="appcpp_system" sysConfig="cryptolmap" runtime="C/C++" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" language="CPP" mssSignature="e0347b75696c062a3ccf1d43ce1085b8">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.746119224">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1888765040">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

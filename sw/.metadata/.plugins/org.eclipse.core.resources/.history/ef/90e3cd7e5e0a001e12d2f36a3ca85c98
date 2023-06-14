@@ -1,0 +1,16 @@
+#ifndef PARAMETERS_H
+#define PARAMETERS_H
+
+#include <stdint.h>
+
+#define WIDTH 512
+#define HEIGHT 512
+#define BSIZE HEIGHT*WIDTH
+
+typedef union {
+    float f;
+    uint32_t   i;
+} condIn;
+
+
+#endif

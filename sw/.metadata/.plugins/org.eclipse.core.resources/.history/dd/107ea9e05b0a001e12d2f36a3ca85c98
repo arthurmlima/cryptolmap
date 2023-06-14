@@ -1,0 +1,27 @@
+#ifndef ENCRYPTO_H
+#define ENCRYPTO_H
+#include <stdint.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
+#include <time.h>
+#include<stdint.h>
+#include <cstdlib>
+#include <iostream>
+#include<stdlib.h>
+#include"parameters.h"
+#include"image.h"
+
+struct str
+{
+    float value;
+    int index;
+};
+
+float* logmap_perm(int dt, float x,float mu);
+uint8_t* permutation(float* v);
+int cmp(const void* a, const void* b);
+
+
+#endif
+

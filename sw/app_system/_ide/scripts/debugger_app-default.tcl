@@ -24,9 +24,9 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow /home/arthur/crypto/sw/cryptolmap/export/cryptolmap/sw/cryptolmap/boot/fsbl.elf
-set bp_52_52_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_44_22_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_52_52_fsbl_bp
+bpremove $bp_44_22_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow /home/arthur/crypto/sw/app/Debug/app.elf

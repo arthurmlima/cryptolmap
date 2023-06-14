@@ -1,0 +1,125 @@
+/*
+ * A special thanks to the author of a code from which we have based this one
+ * Cheers, laraujo !
+ */
+
+#include "AxiTimer.h"
+
+AxiTimer::AxiTimer() {
+	// Initialize the timer hardware...
+	 XTmrCtr_Initialize(&m_AxiTimer, XPAR_TMRCTR_0_DEVICE_ID);
+
+	 //XTmrCtr_SetOptions(&m_AxiTimer, 0, XTC_AUTO_RELOAD_OPTION);
+
+	 // Get the clock period in seconds
+	 m_timerClockFreq = (double) XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ;
+	 m_clockPeriodSeconds = (double)1/m_timerClockFreq;
+
+}
+
+AxiTimer::~AxiTimer() {
+	// TODO Auto-generated destructor stub
+}
+
+
+
+unsigned int AxiTimer::startTimer() {
+	// Start timer 0 (There are two, but depends how you configured in vivado)
+	XTmrCtr_Reset(&m_AxiTimer,0);
+	m_tick_start =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	XTmrCtr_Start(&m_AxiTimer, 0);
+	return m_tick_start;
+}
+
+unsigned int AxiTimer::Get_end_tx() {
+	m_tick_end_tx =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_tx;
+}
+unsigned int AxiTimer::Get_end_hash() {
+	m_tick_end_hash =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_hash;
+}
+// Now there are two paths: perm and diff, lets go over perm first
+unsigned int AxiTimer::Get_end_perm_seq() {
+	m_tick_end_perm_seq =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_perm_seq;
+}
+unsigned int AxiTimer::Get_end_perm_sort() {
+	m_tick_end_perm_sort =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_perm_sort;
+}
+unsigned int AxiTimer::Get_end_perm_scramble() {
+	m_tick_end_perm_scramble =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_perm_scramble;
+}
+
+// now the other is simply at the RXD flag
+unsigned int AxiTimer::Get_end_diff() {
+	m_tick_end_diff =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_diff;
+}
+
+// This is a workaround : diff or perm elapsed first ?
+unsigned int AxiTimer::Get_init_bitxor() {
+	m_tick_init_bitxor =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_init_bitxor;
+}
+
+unsigned int AxiTimer::Get_end_bitxor() {
+	m_tick_end_bitxor =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_end_bitxor;
+}
+
+unsigned int AxiTimer::stopTimer() {
+	XTmrCtr_Stop(&m_AxiTimer, 0);
+	m_tick_last =  XTmrCtr_GetValue(&m_AxiTimer, 0);
+	return m_tick_last;
+}
+
+
+// measure time based on axi clock provided by the FPGA 
+double AxiTimer::Get_ts_tx() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_tx - m_tick_start) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+double AxiTimer::Get_ts_hash() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_hash - m_tick_end_tx) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+double AxiTimer::Get_ts_perm_seq() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_perm_seq - m_tick_end_hash) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+double AxiTimer::Get_ts_perm_sort() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_perm_sort - m_tick_end_perm_seq) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+double AxiTimer::Get_ts_perm_scramble() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_perm_scramble - m_tick_end_perm_sort) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+double AxiTimer::Get_ts_diff() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_diff - m_tick_end_hash) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+
+double AxiTimer::Get_ts_bitxor() {
+	double elapsedTimeInSeconds = (double)(m_tick_end_bitxor - m_tick_init_bitxor) * m_clockPeriodSeconds;
+	return elapsedTimeInSeconds;
+}
+
+void AxiTimer::Report(void) {
+	xil_printf("\n\n\n\r****** This is the time measurement execution report using AxiTimer ******\n\r");
+	xil_printf("Image transmission time: %f sec\n\r",TimeResults.Get_ts_tx);
+	xil_printf("Hash execution time: %f sec\n\r",TimeResults.Get_ts_hash);
+	xil_printf("Permutation:                                          Diffusion:\n\r");
+	xil_printf("		   Sequence:  %f sec                                 		    All: %f sec\n\r",TimeResults.Get_ts_perm_seq,TimeResults.Get_ts_diff);
+	xil_printf("		   Sort:      %f sec                                		    	******* \n\r",TimeResults.Get_ts_perm_sort);
+	xil_printf("		   Perm:      %f sec                                		    	******* \n\r",TimeResults.Get_ts_perm_scramble);
+	xil_printf("Maps time execution:                                   		    	******* \n\r");
+	xil_printf("		   Perm:                                      		    	    \n\r");
+	xil_printf("Bitxor time execution:                                		    		******* \n\r");
+	xil_printf("Total time execution:                                 		    		******* \n\r");
+	xil_printf("******************************************************************************************\n\r");
+
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;app/src/axiTimer.h&apos; to &apos;AxiTimer.h&apos;" description="Rename resource &apos;axiTimer.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/axiTimer.h" name="AxiTimer.h" stamp="1686708256294" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;app/src/axiTimer.cpp&apos; to &apos;AxiTimer.cpp&apos;" description="Rename resource &apos;axiTimer.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/axiTimer.cpp" name="AxiTimer.cpp" stamp="1686708261984" updateReferences="true"/>
+</session>
