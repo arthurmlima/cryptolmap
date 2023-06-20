@@ -4,17 +4,17 @@ set scriptPath [file dirname [info script]]
 puts "Present location: $scriptPath"
 
 
-create_project hw $scriptPath -part xczu7ev-ffvc1156-2-e
+create_project -force hw $scriptPath -part xczu7ev-ffvc1156-2-e
 set_property board_part xilinx.com:zcu104:part0:1.1 [current_project]
 import_files -fileset constrs_1 -force -norecurse $scriptPath/xdc/zcu104.xdc
 create_bd_design "design_1"
 update_compile_order -fileset sources_1
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.4 zynq_ultra_ps_e_0
-endgroup
 #startgroup
-#create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0
+#create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.4 zynq_ultra_ps_e_0
 #endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0
+endgroup
 apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
 set_property CONFIG.PSU__USE__S_AXI_GP0 {1} [get_bd_cells zynq_ultra_ps_e_0]
 set_property  ip_repo_paths $scriptPath/ip_repo [current_project]
@@ -76,8 +76,6 @@ startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
 endgroup
 apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (68 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (68 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_timer_0/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI]
-WARNING: [BD 41-1743] Cannot assign slave segment '/axi_timer_0/S_AXI/Reg' into address space '/zynq_ultra_ps_e_0/Data' because no available apertures exist. This assignment will be automatically excluded.
-Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/zynq_ultra_ps_e_0/Data' at <0xA002_0000 [ 64K ]>.
 regenerate_bd_layout
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
