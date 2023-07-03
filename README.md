@@ -45,7 +45,36 @@ The platform will be automatically created using a block automation including al
 The rest of the application is launched in baremetal a single core of ARM Cortex A53 Domain using the _Vitis_. For these, please refer to the files provided at `cryptolmap/sw/src/`
 
 
-## The HLS module
+## Logistic Map
+
+
+### HLS module 
+
+
+The part of the algorithm in programmable logic consists of: hash sha256, logistic map dedicated to diffusion and the data treatment to encrypt the plain-image and generate the cipher-image.
+
+The following header is the main function.
+
+`void top_module(
+   in_stream &input_stream,
+   out_stream &output_stream,
+   int u_dt,
+   int u_diff,
+   float &m_perm);`
+
+`input_stream` refers to the image transfer and it is implemented in a dedicated slave port using AXI-Stream protocol. It reads the memory from AXI DMA. `output_stream` refers to the cipher image transfer back to the ARM-Host and it is implemented in a dedicated AXI-Stream master port.
+
+`u_dt` is the iterations discarded. `u_diff` is the diffusion parameter of logistic map: $x_{n+1}=rx_{n}(x_{n} + 1)$. Considering $r=$`u_diff`. `m_perm` is the permutation key extracted from hash sha256 of image that must be informed to the ARM-Host. These ports are implemented using memory mapped interface AXI-Lite that is present in any module from _Vitis HLS_.
+
+
+
+
+
+
+
+
+
+
 
 
 
