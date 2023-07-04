@@ -93,6 +93,7 @@ void top_module(
 
 
 ### Image receive transmission. 
+
 The HLS module initiates by reading the AXI-Stream channel the image data shipped in 8 bits/pixel. This design use 64 bits width, therefore the module reads 32768 times the input, considering 512x512 8 bits/pixel image.
 
 ### _SHA256_ 
@@ -109,8 +110,6 @@ It reads the value provided from _SHA256_ as initial condition, performs the log
 
 ![design_SoC](https://user-images.githubusercontent.com/59630651/250720886-bce96b92-7acb-4625-8983-63fa126d1d62.png)
 
-Visit the [1] website for more information.
-
 
 ## Software application 
 
@@ -118,17 +117,98 @@ The cryptosystem in controlled in software by the ARM-Host running baremetal fea
 
 It initially loads the image to be encrypted in the DDR and issue _AXI DMA_ to write to external device and pools while the _AXI DMA_ write interruption is not set. When the write interruption occurs, it means that the HLS module already has the image to process and so, it should also pool for the _SHA256_ `m_perm` from HLS module. 
 
-Once it receives `m_perm`, the program continues to execute the permutation part encryption scheme, this happens concurrently to HLS module execution of diffusion part. 
+Once it receives `m_perm`, the program continues to execute the permutation part encryption scheme that consists of sorting the permutation sequence in ascending order to re-index the image array. 
 
-When HLS module execution elapses, an the read from peripheral interrupt event occurs letting the ARM-Host known that all data are its properly calculated and in its due position and the program may proceed to final encryption step. 
+```
+/*
+ * qsort is a well known "stdio.h" function of sort
+ * @BSIZE is the image size
+ * @to ord is a struct type str containing time sequence of logistic map for permutation and a natural index
+ * @img is the plain-image array
+*/
 
-This involves the inte
+qsort(to_ord, BSIZE, sizeof(to_ord[0]), cmp);
+for (int i = 0; i < BSIZE; i++)
+{
+    sorted_index[i]=to_ord[i].index;
+    img[i] = image[to_ord[i].index];
+}
+
+...
+/*
+* function to compare two elements of string str
+*/
+int cmp(const void* a, const void* b)
+{
+    struct str* a1 = (struct str*)a;
+    struct str* a2 = (struct str*)b;
+    if ((*a1).value > (*a2).value)
+        return -1;
+    else if ((*a1).value < (*a2).value)
+        return 1;
+    else
+        return 0;
+}
+```
+This is the process to achieve the permutated image, important to stress that this happens concurrently to HLS module execution of diffusion part. 
+
+When HLS module execution elapses, an the read from peripheral interrupt event occurs letting the ARM-Host known that all data are its properly set to proceed. 
+
+The final process is the encryption of the permutated-image with the cipher using _xor_ operation. The following image displays the overall process.
 
 ![architecture-1](https://user-images.githubusercontent.com/59630651/250990494-4110bc18-e5ad-4d89-a4d2-51d2d1ac9d25.png)
 ** The above image display as _Programmable Logic_ the content which refer to _HLS module_
 
 
+# Results 
+
+This cryptosystem had the following results for utilization of resources: 
+
+|   | LUT   | Slice | Ratio      |
+|---|-------|-------|------------|
+| LUTRAM | 38931 | 101760 | 38.257664 |
+| FF    | 23367 | 460800 | 5.0709634 |
+| BRAM  | 76    | 312    | 24.358974 |
+| DSP   | 96    | 1728   | 5.555556  |
+| BUFG  | 4     | 544    | 0.7352941 |
+
+Energy resource are estimated from _Vivado_ IDE report. It is important to mention that this is a mere estimation and may not present high accuracy  
+
+
+| Parameter                  | Value         |
+|----------------------------|---------------|
+| Total On-Chip Power (W)    | 3.696         |
+| Power Budget Margin (W)    | NA            |
+| Dynamic (W)                | 3.001         |
+| Device Static (W)          | 0.694         |
+| Effective TJA (C/W)        | 1.0           |
+| Max Ambient (C)            | 96.4          |
+| Junction Temperature (C)   | 28.6          |
+| Confidence Level           | Medium        |
+
+The profiling results for execution of this system is:
+
+
+
+
+
 # References
+\[1\] _Zynq SoC_ product page https://www.xilinx.com/products/silicon-devices/soc.html
+
+
+\[2\] _ZCU104 Development Kit_ product page https://www.xilinx.com/products/boards-and-kits/zcu104.html
+
+
+\[3\] _Xilinx Tools_ documentation product page https://www.xilinx.com/support.html
+
+
+\[4\] _Vitis Libraries_ official repository https://github.com/Xilinx/Vitis_Libraries
+
+
+### Contact 
+
+Have any questions ? Please contact arthurmlima@ieee.org
+
 [1]: https://www.xilinx.com/products/silicon-devices/soc.html "Zynq SoC"
 
 [2]: https://www.xilinx.com/products/boards-and-kits/zcu104.html "zcu104"
@@ -148,30 +228,11 @@ This involves the inte
 
 
 
-# Results 
-
-|   | LUT   | Slice | Ratio      |
-|---|-------|-------|------------|
-| LUTRAM | 38931 | 101760 | 38.257664 |
-| FF    | 23367 | 460800 | 5.0709634 |
-| BRAM  | 76    | 312    | 24.358974 |
-| DSP   | 96    | 1728   | 5.555556  |
-| BUFG  | 4     | 544    | 0.7352941 |
 
 
 
-| Parameter                  | Value         |
-|----------------------------|---------------|
-| Total On-Chip Power (W)    | 3.696         |
-| Power Budget Margin (W)    | NA            |
-| Dynamic (W)                | 3.001         |
-| Device Static (W)          | 0.694         |
-| Effective TJA (C/W)        | 1.0           |
-| Max Ambient (C)            | 96.4          |
-| Junction Temperature (C)   | 28.6          |
-| Confidence Level           | Medium        |
 
-### Falar dos 
+
 
 
 
