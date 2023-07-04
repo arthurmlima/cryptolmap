@@ -1,7 +1,16 @@
-# Cryptolmap
-This repository contains the hardware/software codesign implementation of a modified logistic map suitable for image encryption
+# Table of Contents
 
-
+1. [_Zynq_ SoC Overview](#zynq-soc-overview)
+   1. [_Xilinx_ Development Tools](#xilinx-development-tools)
+2. [Build Cryptosystem Design](#build-cryptosystem-design)
+   1. [Simulation Cryptosystem Design](#simulation-cryptosystem-design)
+3. [The Cryptosystem](#the-cryptosystem)
+   1. [HLS module](#hls-module)
+   2. [Software application](#software-application)
+4. [Results](#results)
+5. [References](#references)
+   1. [Contact](#contact)
+   2. 
 ## _Zynq_ SoC Overview 
 
 _Zynq_ SoC is developed by _Xilinx_ includes an FPGA and an ARM Cortex processor . The ARM-Host is able to communicate with the FPGA in several ways using AXI communication protocol, including memory mapped transfers and stream bursts.
@@ -24,7 +33,7 @@ _Vitis_ is the IDE responsible to build the applications to run on the platform 
 
 
 
-## Build design
+## Build Cryptosystem Design
 
 This project was build using _Xilinx Tools 2023.1_ on a _Ubuntu 22.04_ operational system. You are required to use a Linux system to correctly execute _Vitis Libraries_ \[[4]\]. 
 
@@ -43,6 +52,12 @@ This script finishes by exporting a RTL module to be inserted in a platform sint
 The platform will be automatically created using a block automation including all modules required to build the platform.
 
 The rest of the application is launched in baremetal a single core of ARM Cortex A53 Domain using the _Vitis_. For these, please refer to the files provided at `cryptolmap/sw/src/`
+
+### Simulation Cryptosystem Design
+
+In `cryptolmap/cryptolmap_sim` directory, the sources used for all statistical tests made are available. It is used _MATLAB R2021_\[[5]\]. It is also necessary to install _gcc_ C/C++ toolchain to simulate the design.
+
+The file `cryptolmap/cryptolmap_sim/main.m` issues the entire simulation, the parameters concerning encryption schemes are configured in its header. 
 
 
 # The Cryptosystem
@@ -195,31 +210,26 @@ The profiling results for execution of this system is:
 # References
 \[1\] _Zynq SoC_ product page https://www.xilinx.com/products/silicon-devices/soc.html
 
-
 \[2\] _ZCU104 Development Kit_ product page https://www.xilinx.com/products/boards-and-kits/zcu104.html
-
 
 \[3\] _Xilinx Tools_ documentation product page https://www.xilinx.com/support.html
 
-
 \[4\] _Vitis Libraries_ official repository https://github.com/Xilinx/Vitis_Libraries
 
+\[5\] _MathWorks MATLAB_ official product page https://www.mathworks.com 
+
+\[6\] _NIST SP 800-22 RevA_ official page https://csrc.nist.gov/publications/detail/sp/800-22/rev-1a/final
 
 ### Contact 
 
 Have any questions ? Please contact arthurmlima@ieee.org
 
 [1]: https://www.xilinx.com/products/silicon-devices/soc.html "Zynq SoC"
-
 [2]: https://www.xilinx.com/products/boards-and-kits/zcu104.html "zcu104"
-
 [3]: https://www.xilinx.com/support.html "Xilinx Tools"
-
 [4]: https://github.com/Xilinx/Vitis_Libraries "Vitis Libraries"
-
-[5]: https://www.xilinx.com/products/boards-and-kits/zcu104.html "zcu104"
-
-
+[5]: https://www.mathworks.com "matlab"
+[6]: https://csrc.nist.gov/publications/detail/sp/800-22/rev-1a/final "NIST"
 
 
 
