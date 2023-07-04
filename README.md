@@ -6,7 +6,7 @@ This repository contains the hardware/software codesign implementation of a modi
 
 _Zynq_ SoC is developed by _Xilinx_ includes an FPGA and an ARM Cortex processor. The ARM-Host is able to communicate with the FPGA in several ways using AXI communication protocol, including memory mapped transfers and stream bursts.
 
-**obs: The AXI interface is sinthesized using FPGA resources.
+** obs: The AXI interface is sinthesized using FPGA resources.
 
 There are many different products involving _Zynq_ SoC, including _Zynq 7000_, _Zynq Ultrascale MPSoC_,  _Zynq Ultrascale RFSoC_.  
 
@@ -16,11 +16,11 @@ In this project we used the development board _ZCU104_ featuring a _Zynq Ultrasc
 ### _Xilinx_ Development Tools
 _Xilinx_ offers various enviroments for rapid SoC product deployment. In this project we have used  the _Vivado 2023.1_, _Vitis 2023.1_ and _Vitis HLS 2023.1_. 
 
-_Vivado_ is the IDE responsible to configure the SoC including programmable logic synthesis (this includes the part of your program that is shipped in the FPGA and also AXI interface), basic ARM-Host setups, boards GPIOs, physical prototype constraints. In other terms, _Vivado_ builds a platform.
+_Vivado_ is the IDE responsible to configure the SoC including programmable logic synthesis (this includes the part of the program that is shipped in the FPGA and also the AXI interface), basic ARM-Host setups, boards GPIOs, physical prototype constraints. In other terms, _Vivado_ builds a platform.
 
 _Vitis HLS_ generates a programmable logic module for synthesis from C/C++ program. _Xilinx_ offers many libraries for synthesis _Vitis Libraries_. 
 
-_Vitis_ is the IDE responsible to build the applications to run in the platform made in _Vivado_. This is where the ARM-Host is programmed including everything in software.
+_Vitis_ is the IDE responsible to build the applications to run on the platform made in _Vivado_. This is where the ARM-Host is programmed including everything in software.
 
 
 
@@ -55,7 +55,22 @@ A block design of the platform is the following:
 
 * _Zynq_ block does not refer to the entire chip. It represents, in this block design, the ARM-Host alone. It has enabled one Axi Master port and another Axi Slave port. 
 
-* _Axi DMA_ is an IP core block design of _Xilinx_ that uses the 
+* _Axi DMA_ is an IP block used to transmit information ARM-Host DDR/FPGA bidirectionally using AXI-Stream protocol. _Axi DMA_ should be able to execute without using ARM-Host resources 
+
+* _Axi Perirh_, _Axi SmartConnect_ are essentially multiplexers that assign the ARM-Host Master or Slave ports, respectevily, to their corresponding inputs/outputs
+
+* _Processor System Reset_ is default for handling resets of peripherals
+
+* _System ILA_ _ILA_ stands for _Integrated Logic Analizer_, this is the debug interface, the _ila\_0_ and _ila\_1_ are used to see AXI-Stream ports of _top\_module_
+
+* _top\_module_ is the HLS module which is the part of the code we chose to be implemented in hardware. It is best described in the following section.
+
+* _concat_ is a simple bit concatenation of the interrupts signals of _Axi DMA_.
+
+* _Axi Timer_ is conventional timer which is executed at the same FPGA frequency. Used for profile results.
+
+
+
 
 
 
@@ -79,29 +94,43 @@ void top_module(
 
 `input_stream` refers to the image transfer and it is implemented in a dedicated slave port using AXI-Stream protocol. It reads the memory from AXI DMA. `output_stream` refers to the cipher image transfer back to the ARM-Host and it is implemented in a dedicated AXI-Stream master port.
 
-`u_dt` is the iterations discarded. `u_diff` is the diffusion parameter of logistic map: $x_{n+1}=rx_{n}(x_{n} + 1)$. $r$ is `u_diff`. `m_perm` is the permutation key extracted from hash sha256 of image that must be informed to the ARM-Host. These ports are implemented using memory mapped interface AXI-Lite that is present in any module from _Vitis HLS_.
+`u_dt` is the iterations discarded. `u_diff` is the diffusion parameter of logistic map: $x_{n+1}=rx_{n}(x_{n} + 1)$. $r$ is `u_diff`. `m_perm` is the permutation key extracted from hash _SHA256_ of image that must be informed to the ARM-Host. These ports are implemented using memory mapped interface AXI-Lite that is present in any module from _Vitis HLS_.
 
 
 ### Image receive transmission. 
-The HLS module initiates by reading the AXI-Stream channel the image data shipped in 8 bits/pixel. This design use 64 bits width, therefore it reads 
+The HLS module initiates by reading the AXI-Stream channel the image data shipped in 8 bits/pixel. This design use 64 bits width, therefore the module reads 32768 times the input, considering 512x512 8 bits/pixel image.
 
-### _SHA256_ function
+### _SHA256_ 
 
+This is an open-source implementation provided by _Xilinx_ at _Vitis Libraries_. Punctual changes were made for dimensioning the buffers to avoid deadlocks regarding width stream to match the image size, so please for this block, refer to the forked repository of _Vitis Libraries_. 
 
-####
+For further comprehension regarding this block, refer to official documentationby for their security library. 
 
+### Logistic Map for diffusion 
 
-
-
-
-
-
+It reads the value provided from _SHA256_ as initial condition, performs the logistic map calculations and encrypt the image. The output of `top_module` is tied this function output which drives the AXI-Stream master port of HLS module.
 
 
+### Dataflow  
+
+![design_SoC](https://user-images.githubusercontent.com/59630651/250720886-bce96b92-7acb-4625-8983-63fa126d1d62.png)
 
 
 
-### Results 
+# References
+
+
+
+
+
+
+
+
+
+
+
+
+# Results 
 
 |   | LUT   | Slice | Ratio      |
 |---|-------|-------|------------|
@@ -116,6 +145,7 @@ The HLS module initiates by reading the AXI-Stream channel the image data shippe
 | Parameter                  | Value         |
 |----------------------------|---------------|
 | Total On-Chip Power (W)    | 3.696         |
+| Power Budget Margin (W)    | NA            |
 | Dynamic (W)                | 3.001         |
 | Device Static (W)          | 0.694         |
 | Effective TJA (C/W)        | 1.0           |
@@ -124,3 +154,8 @@ The HLS module initiates by reading the AXI-Stream channel the image data shippe
 | Confidence Level           | Medium        |
 
 ### Falar dos 
+
+
+
+
+
