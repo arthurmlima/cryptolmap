@@ -10,7 +10,7 @@
 4. [Results](#results)
 5. [References](#references)
    1. [Contact](#contact)
-   2. 
+   
 ## _Zynq_ SoC Overview 
 
 _Zynq_ SoC is developed by _Xilinx_ includes an FPGA and an ARM Cortex processor . The ARM-Host is able to communicate with the FPGA in several ways using AXI communication protocol, including memory mapped transfers and stream bursts.
